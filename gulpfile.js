@@ -2,16 +2,25 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const gulp-rollup = require('gulp-rollup');
 
-//开发环境
-gulp.task("builddev",()=>{
-    
-})
+const entry= "src/nodeuii/**/*.js";
 
+//开发环境
+function builddev(){
+    return gulp.src(entry)
+    .pipe(bable())
+    .pipe(gulp.dest())
+}
 
 //上线环境
-gulp.task("buildprod",()=>{
-
-})
+function buildprod(){
+    return gulp.src(entry)
+    .pipe(babel())
+    .pipe(gulp.dest()) 
+}
 
 // 测试环境 
-gulp.task('')
+function test(){
+    return gulp.src(entry)
+    .pipe(babel())
+    .pipe()
+}
