@@ -9,6 +9,6 @@ module.exports = (app)=>{
         _.get("/",indexControl.actionIndex()) 
         _.get("/data",indexControl.actionData()) 
     }))
+    
 
 }
-

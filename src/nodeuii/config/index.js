@@ -1,8 +1,5 @@
-const {
-    join
-}=require("path");
-
-const _ = require('lodash');
+import { join } from "path";
+import _ from 'lodash';
 
 let config = {
     "viewDir": join(__dirname,"../../webapp/views"),
@@ -11,7 +8,7 @@ let config = {
 
 if(process.env.NODE_ENV == "development"){
     const localConfig = {
-        baceUrl: '',
+        baceUrl: 'http://192.168.95.76:3000/',
         port: "3000"
     }
     config = _.extend(config,localConfig)
@@ -24,4 +21,5 @@ if(process.env.NODE_ENV == "production"){
     }
     config = _.extend(config,prodConfig)
 }
+
 module.exports = config;

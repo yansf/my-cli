@@ -1,12 +1,12 @@
-console.log(process.env.NODE_ENV);
-const serve = require('koa-static');
-const render = require('koa-swig');
-const Koa = require('koa');
-const co = require('co');
-const log4js = require('log4js');
-const errorHandler = require('./middleware/errorHandler');
+
+import serve from 'koa-static';
+import render from 'koa-swig';
+import Koa from 'koa';
+import co from 'co';
+import log4js from 'log4js';
+import errorHandler from './middleware/errorHandler';
 const app = new Koa();
-const config = require("./config");
+import config from "./config";
 
 app.context.render = co.wrap(render({
     root: config.viewDir,

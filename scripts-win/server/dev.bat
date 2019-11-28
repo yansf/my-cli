@@ -1,4 +1,4 @@
 
-REM ceshi
+REM 开发打包
 
-echo hello
+cross-env NODE_ENV=development gulp

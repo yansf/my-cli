@@ -8,7 +8,6 @@ const errorHandler = {
             }
         });
         app.use(async (ctx,next)=>{
-
             await next();
             if(ctx.status !== 404){
                 return;
