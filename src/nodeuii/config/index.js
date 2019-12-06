@@ -11,7 +11,7 @@ if(process.env.NODE_ENV == "development"){
         baceUrl: 'http://192.168.95.76:3000/',
         port: "3000"
     }
-    config = _.extend(config,localConfig)
+    config = _.extend(config,localConfig);
 }
 
 if(process.env.NODE_ENV == "production"){
@@ -19,7 +19,7 @@ if(process.env.NODE_ENV == "production"){
         baceUrl: '',
         port: "8081"
     }
-    config = _.extend(config,prodConfig)
+    config = _.extend(config,prodConfig);
 }
 
 module.exports = config;

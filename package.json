@@ -9,7 +9,9 @@
     "docs": "",
     "server:dev": "scripty",
     "server:prod": "scripty",
-    "server:lint": "scripty"
+    "server:lint": "scripty",
+    "client:dev": "webpack --mode development",
+    "client:prod": "webpack --mode production"
   },
   "author": "yansf",
   "license": "ISC",
@@ -20,11 +22,16 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "cross-env": "^6.0.0",
     "del": "^5.1.0",
+    "glob": "^7.1.4",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-rollup": "^2.16.2",
+    "html-webpack-plugin": "^3.2.0",
     "scripty": "^1.9.1",
-    "webpack": "^4.35.2"
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2",
+    "yargs-parser": "^16.1.0"
   },
   "dependencies": {
     "co": "^4.6.0",

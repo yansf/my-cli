@@ -14,7 +14,7 @@ function builddev(){
     return gulp.src(entry)
         .pipe(babel({
             babelrc: false,
-            plugins: ["transform-es2015-modules-commonjs"]
+            plugins: ["transform-es2015-modules-commonjs"] 
         }))
         .pipe(gulp.dest("dist"))
 }

@@ -10,7 +10,7 @@ class SafeRequest {
         let result = {
             code: 0,
             data:null
-        }
+        };
         return new Promise((resolve,reject)=>{
             fetch(config.baceUrl + this.url)
             // .then((res)=>{
