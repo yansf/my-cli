@@ -1,7 +1,7 @@
 const Index = require("../models");
 
 class IndexController{
-    constructor(){
+    constructor(name,type){
 
     }
     actionIndex(){

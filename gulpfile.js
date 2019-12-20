@@ -47,10 +47,10 @@ function test(){
     // .pipe()
 }
 
-let build = gulp.series(clean,builddev);
+let build = gulp.series(builddev);
 
 if(process.env.NODE_ENV == "production"){
-    build = gulp.series(clean,buildprod,buildConfig);
+    build = gulp.series(buildprod,buildConfig);
 }
 
 gulp.task("default",build);

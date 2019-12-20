@@ -2,8 +2,10 @@ import { join } from "path";
 import _ from 'lodash';
 
 let config = {
-    "viewDir": join(__dirname,"../../webapp/views"),
-    "staticDir": join(__dirname,"../../webapp/assets")
+    // "viewDir": join(__dirname,"../../webapp/views"),
+    // "staticDir": join(__dirname,"../../webapp/assets")
+    "viewDir": join(__dirname, "..", "views"),
+    "staticDir": join(__dirname, "..", "assets")
 }
 
 if(process.env.NODE_ENV == "development"){

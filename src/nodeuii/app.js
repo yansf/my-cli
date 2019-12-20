@@ -19,7 +19,7 @@ app.context.render = co.wrap(render({
 
 log4js.configure({
     appenders: {
-            cheese: { type: 'file', filename: '../../docs/yansf-log.log' } 
+            cheese: { type: 'file', filename: '../docs/yansf-log.log' } 
         },
     categories: { default: { appenders: ['cheese'], level: 'error' } }
 })

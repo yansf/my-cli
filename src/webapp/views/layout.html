@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>测试</title>
-    <link rel="stylesheet" href="style/index.css">
+    <title>{% block title %}标题{% endblock %}</title>
 </head>
 <body>
     [[data]]
-    <div id="app"></div>
+    <div id="app">
+        {% block content %}
+        真正的业务代码
+        {% endblock %}
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+<script>
+     var pjax = new Pjax({
+         selectors: ['#app'],
+         {# currentUrlFullReload: false, #}
+         cacheBust: false,
+     })
+</script>
+{% block script %}
+
+{% endblock %}
 </html>
